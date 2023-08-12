@@ -1,0 +1,356 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+  }
+  .header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(2, 5, 30, 0.527),rgba(2, 5, 30, 0.5)),
+    url("https://www.dcu.ie/sites/default/files/styles/widescreen_television/public/media/2020/03/12/2269_057d_1.jpg?itok=lU10C9FB");
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    position: relative;
+  }
+  .clgLogo{
+    width: 50px;
+    height: 50px;
+  }
+  nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2% 6%;
+  }
+  nav a{
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+  }
+  nav label{
+    font-size: 40px;
+    color:rgb(17, 237, 163);
+    
+  }
+  .nav-links{
+    flex:1;
+    text-align: right;
+  }
+  .nav-links ul li{
+    display:inline-block;
+    list-style: none;
+    position: relative;
+    padding: 8px 12px;
+  }
+  .nav-links ul li a{
+    text-decoration: none;
+    color: #e4f009;
+    font-size: 20px;
+  }
+  .nav-links ul li::after{
+    content:"";
+    width:0%;
+    height: 2px;
+    background: #19f797;
+    display: block;
+    margin: auto;
+    transition: 0.4s;
+  }
+  .nav-links ul li:hover::after{
+    width: 100%;
+  }
+  .text-box{
+    width: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+  }
+  marquee{
+    color:#f7191d;
+    font-size: 45px;
+  }
+  .text-box p{
+    color: aliceblue;
+    margin: 15px 0 30px;
+  }
+  .super-btn{
+    padding: 6px 15px;
+    border:1px solid cyan;
+    border-radius: 10px;
+    color:white;
+    text-decoration: none;
+    position: relative;
+    cursor:pointer;
+  }
+  .super-btn:hover{
+    background: rgb(52, 175, 175);
+    color: antiquewhite;
+    transition: 1s;
+    border: none;
+  }
+  nav .fa{
+    display: none;
+  }
+  @media(max-width:700px){
+    marquee{
+        font-size: 30px;
+    }
+    .nav-links ul li{
+        display: inline-block;
+    }
+    .nav-links{
+        position: fixed;
+        height: 100vh;
+        width:50%;
+        background: #459480;
+        top: 0;
+        right: -50%;
+        text-align: left;
+        z-index: 2;
+        transition: 0.8s;
+    }
+    nav .fa{
+        display:block;
+        margin:10px;
+        cursor: pointer;
+        color:#fff;
+        font-size: 20px;
+    }
+    .nav-links ul{
+        padding: 25px;
+    }
+  }
+  /* -----------Course---------- */
+  
+  .course{
+    width:85%;
+    margin:auto;
+    text-align: center;
+    padding-top: 100px;
+    }
+    h1{
+        font-size: 35px;
+        font-weight: 600;
+    }
+    p{
+        color:#777;
+        line-height: 22px;
+        padding: 10px;
+        font-weight: 300;
+    }
+    .row-sec{
+        margin-top: 5%;
+        display: flex;
+        justify-content: space-between;
+    }
+    .course-col{
+        flex-basis: 31%;
+        border-radius: 10px;
+        padding: 20px 12px;
+        margin-bottom: 5%;
+        box-sizing: border-box;
+        transition: 0.5s;
+    }
+    .course-col:hover{
+        box-shadow: 0 0 20px 0 rgba(0,0,0,0.2);
+    }
+    h3{
+        margin:10px 0;
+        text-align: center;
+        font-weight: 600;
+        font-size: 26px;
+    }
+    @media(max-width:700px){
+        .row-sec{
+            flex-direction: column;
+        }
+    }
+    
+    /* -------------campus----------------- */
+    
+    .campus{
+        width: 85%;
+        padding-top: 50px;
+        text-align: center;
+        margin: auto;
+    }
+    .campus-col{
+        flex-basis: 32%;
+        border-radius: 10px;
+        margin-bottom: 30px;
+        position: relative;
+        overflow: hidden;
+    }
+    .campus-col img{
+        width:100%;
+        display: block;
+    }
+    .layer{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: 0.5s;
+        background: transparent;
+    }
+    .layer:hover{
+        background: hsla(50, 80%, 100%, 0.3);
+    }
+    .layer h3{
+        width:100%;
+        font-weight: 700;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        position: absolute;
+        font-size: 26px;
+        transition: 0.5s;
+        opacity: 0;
+    }
+    .layer:hover h3{
+        bottom: 43%;
+        opacity: 1;
+    }
+    /* -------------------facilities------------- */
+    
+    .facilities{
+        width:85%;
+        margin:auto;
+        text-align: center;
+        padding-top: 50px;
+        }
+        .facilities-col{
+            flex-basis: 32%;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            position: relative;
+            overflow: hidden;
+            text-align: left;
+        }
+        .facilities-col img{
+            width:100%;
+            display: block;
+            border-radius: 10px;
+        }
+        .facilities-col p{
+            padding: 0;
+        }
+        .facilities-col h3{
+            margin-top: 15px;
+            margin-bottom: 15px;
+            text-align: left;
+        }
+        /* ----------------Testimonials------------------- */
+    
+        .testimonials{
+            width:85%;
+            margin:auto;
+            text-align: center;
+        }
+        .testimonial-col{
+            display: flex;
+            flex-basis: 48%;
+            border-radius: 10px;
+            margin-bottom: 5%;
+            text-align: left;
+            background: #e6f5ff;
+            padding: 20px;
+            cursor: pointer;
+        }
+        .testimonial-col img{
+            height:40px;
+            width:40px;
+            margin-left: 5px;
+            margin-right: 20px;
+            border-radius: 50%;
+        }
+        .testimonial-col p{
+            padding: 0;
+        }
+        .testimonial-col h3{
+            text-align: left;
+            margin-top: 15px;
+            font-size: 26px;
+        }
+        .testimonial-col .fa{
+            color:#f71967
+        }
+        @media(max-width:700px){
+            .testimonial-col img{
+                margin-left: 0px;
+                margin-right: 15px;
+            }
+        }
+    
+        /* --------------Call To Action--------------------- */
+    
+        .cta{
+            width:100%;
+            margin:50px auto;
+            text-align: center;
+            padding: 200px 0;
+            background-image: linear-gradient(rgba(2, 5, 30, 0.527),rgba(2, 5, 30, 0.5)),
+            url("https://innovativeprofessionaloffices.com/wp-content/uploads/2017/10/IPO-New-1024x683.jpg");
+            background-position: center;
+            background-size: cover;
+            background-attachment: fixed;
+            border-radius: 10px;
+        }
+        .cta h1{
+            color:#f7191d;
+            margin-bottom: 40px;
+            padding: 0;
+            font-weight: 800;
+        }
+        @media(max-width:700px){
+            .cta h1{
+                font-size: 24px;
+            }
+        }
+    
+        /* -----------------------Footer--------------------- */
+    
+        .footer{
+            width: 85%;
+            text-align: center;
+            margin:auto;
+            padding: 30px 0;
+        }
+        .footer h4{
+            margin-top: 30px;
+            margin-bottom: 25px;
+            font-weight: 600;
+        }
+        .icons .fa{
+            margin:0 10px;
+            padding: 18px 0;
+        }
+        .fa-facebook{
+            color:blue;
+        }
+        .fa-instagram{
+            color:#ef2999
+        }
+        .fa-twitter{
+            color:#33adff;
+        }
+        .fa-linkedin{
+            color:#008ae6;
+        }
+        .fa-whatsapp{
+            color:#00ff99;
+        }
+        .fa-telegram{
+            color:#3399ff;
+        }
+        .fa-youtube{
+            color:#ff3300;
+        }
+        .fa-heart-o{
+            color:#f7191d
+        }
